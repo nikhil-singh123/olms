@@ -53,7 +53,7 @@ const VerifyAdmin = () => {
       }
       
       const response = await axios.post(
-        "http://localhost:8080/library/verifyadmin",
+        "http://localhost:3031/library/verifyadmin",
         formData.updated_details
       );
       setFormData({
