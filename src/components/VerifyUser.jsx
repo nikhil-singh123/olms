@@ -37,7 +37,7 @@ const VerifyUser = () => {
     try {
       // Ensure both fields are filled before submitting
       if (!formData.updated_details.email) {
-        throw new Error("Please fill the email.");
+        throw new Error("Please enter your email.");
       }
       
       const response = await axios.post(
@@ -54,7 +54,7 @@ const VerifyUser = () => {
         ...formData,
         successMessage: "",
         errorMessage:
-          err.response?.data.error || "Failed to login.",
+          err.response?.data.error || "Login failed.",
       });
     }
   };

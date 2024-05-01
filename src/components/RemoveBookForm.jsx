@@ -57,7 +57,7 @@ const RemoveBookForm = () => {
     });
       setFormData({
         ...formData,
-        successMessage: `Book with  isbn ${formData.updated_details.isbn} delete successfully.`,
+        successMessage: `Book with  isbn ${formData.updated_details.isbn} deleted successfully.`,
         errorMessage: "",
       });
     } catch (err) {

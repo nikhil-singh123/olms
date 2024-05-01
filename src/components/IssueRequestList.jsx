@@ -30,11 +30,6 @@ const IssueRequestList = () => {
       <h2>Issue Requests</h2>
       {error && <p>{error}</p>}
 
-
-
-
-
-    
     </div>
 
     <div className="book-list-container">

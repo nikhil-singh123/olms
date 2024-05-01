@@ -28,7 +28,7 @@ const StartingPagefin = () => {
 
         
         <button className='buttonstyle4'>
-            <Link to="/SignupUser">Sign Up user</Link>
+            <Link to="/SignupUser">New user? Sign up</Link>
           </button></div>
     </div>
     </>

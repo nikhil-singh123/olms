@@ -34,7 +34,7 @@ const SearchBookForm = () => {
       setFormData({
         ...formData,
         book: null,
-        error: err.response?.data.error || "Failed to search book",
+        error: err.response?.data.error || "Enter details",
       });
     }
     console.log(formData.book)

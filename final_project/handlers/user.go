@@ -29,7 +29,7 @@ func Read_BooksBY(c *gin.Context) {
 	var books []models.Bookinventry
 	// str := query.Queryt
 
-	err := storage.DB.Where("title like ? or authors like ?  or publisher like ?", "%"+str+"%", "%"+str+"%", "%"+str+"%").Find(&books).Error
+	err := storage.DB.Where("title LIKE ? or authors LIKE ?  or publisher LIKE ?", "%"+str+"%", "%"+str+"%", "%"+str+"%").Find(&books).Error
 
 	// err := storage.DB.Where("title LIKE?", "%"+str+"%").Find(&books).Error
 
@@ -84,7 +84,7 @@ func Issue_Request(c *gin.Context) {
 		// err4 := storage.DB.Where("isbn =?", isbn).Find(&expected).Error
 		if err4 != nil {
 
-			c.JSON(400, "doest know whe it will be available")
+			c.JSON(400, "doest know when it will be available")
 			return
 		}
 
@@ -111,7 +111,7 @@ func Issue_Request(c *gin.Context) {
 
 	c.JSON(200, "REQUEST ADDEDS")
 }
-func Sign_Up_User (c *gin.Context){
+func Sign_Up_User(c *gin.Context) {
 
 	var user models.Users
 
@@ -121,7 +121,7 @@ func Sign_Up_User (c *gin.Context){
 		c.JSON(400, "cannont create user")
 		return
 	}
-	user.Role="reader"
+	user.Role = "reader"
 	err2 := storage.DB.Create(&user).Error
 
 	if err2 != nil {
@@ -132,6 +132,5 @@ func Sign_Up_User (c *gin.Context){
 
 		"message": "new user created",
 	})
-
 
 }

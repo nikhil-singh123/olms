@@ -62,7 +62,7 @@ func VerifyUser(c *gin.Context) {
 	}
 
 	if err := storage.DB.Where("email = ?", ver.Email).First(&user).Error; err != nil {
-		c.AbortWithStatusJSON(404, gin.H{"message": "email not foundd"})
+		c.AbortWithStatusJSON(404, gin.H{"message": "email not found"})
 		return
 	}
 

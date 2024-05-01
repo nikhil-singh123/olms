@@ -20,7 +20,7 @@ const UserPagefin = () => {
       <img className="adminimage2" src="https://st2.depositphotos.com/15813590/44041/v/450/depositphotos_440419084-stock-illustration-raise-your-hand-ask-black.jpg" />
 
            <button className='buttonstyle'>
-           <Link to="/RaiseIssueRequestForm">Raise Request</Link>
+           <Link to="/RaiseIssueRequestForm">Raise Issue</Link>
           </button></div>
     </div>
     </>

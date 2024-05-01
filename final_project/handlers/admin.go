@@ -24,7 +24,7 @@ func Library(c *gin.Context) {
 
 		c.JSON(400, gin.H{
 
-			"meesage": "DATA IS EMPTY",
+			"message": "Data is empty",
 		})
 
 		return
@@ -85,7 +85,7 @@ func Add_Book(c *gin.Context) {
 	}
 	c.JSON(200, gin.H{
 
-		"MESSAGE": "BOOK ADDED SUCCESFULLY",
+		"message": "book added sucessfully",
 	})
 
 }
@@ -99,7 +99,7 @@ func Read_Books(c *gin.Context) {
 	if err != nil {
 
 		c.JSON(404, gin.H{
-			"MESSAGE": "no books",
+			"message": "no books",
 			// "body":    books,
 		})
 
@@ -109,7 +109,7 @@ func Read_Books(c *gin.Context) {
 	if len(books) == 0 {
 
 		c.JSON(404, gin.H{
-			"MESSAGE": "no books available to read",
+			"message": "no books available to read",
 			// "body":    books,
 		})
 		return
@@ -129,7 +129,7 @@ func Getbookbyid(c *gin.Context) {
 	err := storage.DB.First(&book, isbn).Error
 
 	if err != nil {
-		c.JSON(404, "book not avilable")
+		c.JSON(404, "Book not avilable")
 		return
 	}
 
@@ -146,7 +146,7 @@ func Update_Book(c *gin.Context) {
 	var book models.Bookinventry
 	err2 := c.BindJSON(&updatebook)
 	if err2 != nil {
-		c.JSON(400, "cannot update")
+		c.JSON(400, "Cannot update")
 		return
 	}
 	// fmt.Println(isbn)
@@ -155,7 +155,7 @@ func Update_Book(c *gin.Context) {
 	err := storage.DB.First(&book, isbn).Error
 	storage.DB.Save(&book)
 	if err != nil {
-		c.JSON(400, "cannot update")
+		c.JSON(400, "Cannot update")
 		return
 	}
 
@@ -200,7 +200,7 @@ func Delete_Book(c *gin.Context) {
 	}
 
 	c.JSON(200, gin.H{
-		"MESSAGE": "BOOK delete SUCCESFULLY",
+		"message": "Book deleted successfully",
 	})
 
 }
@@ -211,12 +211,12 @@ func All_Requests(c *gin.Context) {
 	err := storage.DB.Find(&requests).Error
 
 	if err != nil {
-		c.JSON(400, "bad request")
+		c.JSON(400, "Bad request")
 		return
 	}
 
 	if len(requests) == 0 {
-		c.JSON(404, "book inventry is empty")
+		c.JSON(404, "Book inventry is empty")
 		return
 
 	}
@@ -250,7 +250,7 @@ func Aprrove_Request(c *gin.Context) {
 	str := reqevent.RequestType
 	if str == "accepted" {
 
-		c.JSON(400, "alread issued")
+		c.JSON(400, "already issued")
 		return
 
 	}
@@ -305,7 +305,7 @@ func Disapprove(c *gin.Context) {
 
 	if er != nil {
 
-		c.JSON(404, "EOORRRR")
+		c.JSON(404, "error")
 		return
 
 	}
@@ -320,7 +320,7 @@ func Disapprove(c *gin.Context) {
 	str := reqevent.RequestType
 	if str == "reject" {
 
-		c.JSON(400, "alread rejected")
+		c.JSON(400, "already rejected")
 		return
 
 	}

@@ -38,12 +38,6 @@ const UpdateBookForm = () => {
     });
   };
 
-  
-
-
-
-
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();

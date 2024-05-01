@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import './StartingPagefin.css'; // Import your CSS file for styling
+import './Navbar.css'; // Import your CSS file for styling
 
 const Navbar = () => {
   return (
