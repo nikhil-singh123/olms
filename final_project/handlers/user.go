@@ -29,7 +29,7 @@ func Read_BooksBY(c *gin.Context) {
 	var books []models.Bookinventry
 	// str := query.Queryt
 
-	err := storage.DB.Where("title LIKE ? or authors LIKE ?  or publisher LIKE ?", "%"+str+"%", "%"+str+"%", "%"+str+"%").Find(&books).Error
+	err := storage.DB.Where("title LIKE ? or authors LIKE ?  or publisher LIKE ?", str+"%", str+"%", str+"%").Find(&books).Error
 
 	// err := storage.DB.Where("title LIKE?", "%"+str+"%").Find(&books).Error
 
