@@ -10,9 +10,9 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Admin() {
-	fmt.Println("hey")
-}
+// func Admin() {
+// 	fmt.Println("hey")
+// }
 
 func Library(c *gin.Context) {
 
@@ -85,7 +85,7 @@ func Add_Book(c *gin.Context) {
 	}
 	c.JSON(200, gin.H{
 
-		"message": "book added sucessfully",
+		"message": "book added successfully",
 	})
 
 }
@@ -216,7 +216,7 @@ func All_Requests(c *gin.Context) {
 	}
 
 	if len(requests) == 0 {
-		c.JSON(404, "Book inventry is empty")
+		c.JSON(404, "Book inventory is empty")
 		return
 
 	}
@@ -243,7 +243,7 @@ func Aprrove_Request(c *gin.Context) {
 
 	if err != nil {
 
-		c.JSON(400, "wrong id enetered")
+		c.JSON(400, "wrong id entered")
 		return
 	}
 
@@ -327,6 +327,6 @@ func Disapprove(c *gin.Context) {
 	reqevent.RequestType = "reject"
 	storage.DB.Model(&reqevent).Where("req_id = ?", tmp).Save(&reqevent)
 
-	c.JSON(200, "rejeced")
+	c.JSON(200, "rejected")
 
 }

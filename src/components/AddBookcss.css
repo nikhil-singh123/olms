@@ -27,7 +27,7 @@
 
 .add-div form {
   display: flex;
-  flex-direction: column;
+  flex-direction:column
 }
 
 .add-div input {

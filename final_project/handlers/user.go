@@ -42,7 +42,6 @@ func Read_BooksBY(c *gin.Context) {
 	// if len(books)
 
 	c.JSON(200, books)
-
 }
 
 func Issue_Request(c *gin.Context) {
@@ -89,7 +88,7 @@ func Issue_Request(c *gin.Context) {
 		}
 
 		c.JSON(400, gin.H{
-			"MESSAGE":      "book is not available it will be available on",
+			"message":      "book is not available it will be available on",
 			"available on": expected,
 			// "body":    books,
 		})
@@ -109,7 +108,7 @@ func Issue_Request(c *gin.Context) {
 		return
 	}
 
-	c.JSON(200, "REQUEST ADDEDS")
+	c.JSON(200, "REQUEST ADDED")
 }
 func Sign_Up_User(c *gin.Context) {
 

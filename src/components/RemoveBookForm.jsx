@@ -70,13 +70,6 @@ const RemoveBookForm = () => {
     }
   };
 
-
-
-
-
-
-
-
   return (
     <div className="remove-div">
       <div className="ash">

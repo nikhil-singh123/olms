@@ -18,8 +18,8 @@
   .navbar-title {
     margin-left: 200px;
     margin-top: 15px;
-    font-size: 75px; /* Increase the font size */
-    font-weight: bold;
+    font-size: 65px; /* Increase the font size */
+    font-weight:500;
     font-family: cursive; /* Set font family to cursive */
   }
 

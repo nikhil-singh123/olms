@@ -58,7 +58,8 @@ const AddBookForm = () => {
   return (
     <div className="mainadd-div">
       <div className="add-div">
-        <h2>ADDING BOOK</h2>
+        <h2>ADD BOOK</h2>
+        <h4>Enter book details</h4>
         <form onSubmit={handleSubmit}>
           <input
             type="number"
@@ -137,7 +138,7 @@ const AddBookForm = () => {
           <br />
 
           <br />
-          <button type="submit">Add Book</button>
+          <button type="submit">Submit</button>
         </form>
         {message && <p>{message}</p>}
         {error && <p>{error}</p>}

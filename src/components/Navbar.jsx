@@ -10,7 +10,7 @@ const Navbar = () => {
 
       <div className="navbar-title">
         
-        Online Book Management System
+        Library Management System
         
         </div>
     </div>
